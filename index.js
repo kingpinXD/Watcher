@@ -3,7 +3,7 @@ const app =express();
 
 
 app.get('/',(req,res)=>{
-    res.send({Name:'Watcher'})
+    res.send({Name:'Project'})
 })
 const PORT =process.env.PORT || 5000;
 app.listen(PORT);
