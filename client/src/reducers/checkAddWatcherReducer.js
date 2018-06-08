@@ -1,15 +1,12 @@
-import {
-  CHECK_ADD_WATCHER_SCREEN,
-  DESTROY_ADD_WATCHER_SCREEN
-} from "../actions/types";
+import { SHOW_ADD_WATCHER, REMOVE_ADD_WATCHER } from "../actions/types";
 
 export default function(state = null, action) {
   switch (action.type) {
-    case CHECK_ADD_WATCHER_SCREEN:
+    case SHOW_ADD_WATCHER:
+      return false;
+    case REMOVE_ADD_WATCHER:
       return true;
-    case DESTROY_ADD_WATCHER_SCREEN:
-      return false;
     default:
-      return false;
+      return state;
   }
 }
