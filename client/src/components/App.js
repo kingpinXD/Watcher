@@ -7,7 +7,7 @@ import * as actions from "../actions";
 import Home from "./Home";
 import AddWatcher from "./AddWatcher/AddWatcher";
 
-const Landing = () => <h2>LANDING</h2>;
+const Landing = () => <h2>Watcher Landing Page</h2>;
 
 class App extends Component {
   componentDidMount() {
@@ -30,4 +30,7 @@ class App extends Component {
   }
 }
 
-export default connect(null, actions)(App);
+export default connect(
+  null,
+  actions
+)(App);
