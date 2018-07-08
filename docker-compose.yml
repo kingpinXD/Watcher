@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  Wmongo:
+    container_name: Wmongo
+    tty: true
+    image: mongo:3.6
+    ports:
+      - "27017:27017"
+    
+  watcherapi:
+    container_name: WatcherApi
+    image: node:watcher
+    environment:
+       NODE_ENV: production
+       googleClientID: 813281748967-60c0p23o16g1utd4ad1cl9ea37elo2d4.apps.googleusercontent.com
+       googleClientSecret: sZhZO3RMBg1p8kmq7HkfY40M
+       mongoconnectionstring: mongodb://Wmongo
+    depends_on:
+      - Wmongo
+    tty: true
+    ports:
+      - "3000:5001"
+    
+    
+    
+      
+  
+       
